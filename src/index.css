@@ -2,95 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* تكنوفلاش - نظام التصميم Neumorphism العربي */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* خلفيات Neumorphism فاتحة */
+    --background: 220 25% 94%;
+    --foreground: 222 35% 18%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 25% 96%;
+    --card-foreground: 222 35% 18%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 96%;
+    --popover-foreground: 222 35% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* اللون الأساسي - أزرق فيروزي */
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 195 90% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* ثانوي - بنفسجي ناعم */
+    --secondary: 250 60% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 88%;
+    --muted-foreground: 222 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 165 75% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 35% 18%;
 
-    --radius: 0.5rem;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 220 20% 85%;
+    --input: 220 20% 90%;
+    --ring: 195 85% 45%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 1rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* ظلال Neumorphism */
+    --neu-light: 0 0% 100%;
+    --neu-dark: 220 25% 80%;
+    --shadow-neu: 8px 8px 20px hsl(var(--neu-dark) / 0.5), -8px -8px 20px hsl(var(--neu-light) / 0.9);
+    --shadow-neu-sm: 4px 4px 10px hsl(var(--neu-dark) / 0.4), -4px -4px 10px hsl(var(--neu-light) / 0.8);
+    --shadow-neu-inset: inset 4px 4px 10px hsl(var(--neu-dark) / 0.4), inset -4px -4px 10px hsl(var(--neu-light) / 0.8);
+    --shadow-neu-pressed: inset 6px 6px 12px hsl(var(--neu-dark) / 0.5), inset -6px -6px 12px hsl(var(--neu-light) / 0.9);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* تدرجات */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(280 65% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(180 75% 50%));
+    --gradient-warm: linear-gradient(135deg, hsl(25 90% 60%), hsl(38 92% 55%));
+    --gradient-bg: linear-gradient(135deg, hsl(220 30% 96%), hsl(220 25% 92%));
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 28% 96%;
+    --sidebar-foreground: 222 35% 18%;
+    --sidebar-primary: 195 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 90%;
+    --sidebar-accent-foreground: 222 35% 18%;
+    --sidebar-border: 220 20% 85%;
+    --sidebar-ring: 195 85% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 222 30% 12%;
+    --foreground: 220 25% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 28% 16%;
+    --card-foreground: 220 25% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 28% 16%;
+    --popover-foreground: 220 25% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 195 85% 55%;
+    --primary-foreground: 222 30% 12%;
+    --primary-glow: 195 90% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 250 60% 65%;
+    --secondary-foreground: 222 30% 12%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 222 25% 20%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 165 75% 50%;
+    --accent-foreground: 222 30% 12%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 145 60% 50%;
+    --success-foreground: 222 30% 12%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 222 30% 12%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 25% 22%;
+    --input: 222 25% 22%;
+    --ring: 195 85% 55%;
+
+    --neu-light: 222 30% 18%;
+    --neu-dark: 222 35% 6%;
+    --shadow-neu: 8px 8px 20px hsl(var(--neu-dark) / 0.7), -8px -8px 20px hsl(var(--neu-light) / 0.5);
+    --shadow-neu-sm: 4px 4px 10px hsl(var(--neu-dark) / 0.6), -4px -4px 10px hsl(var(--neu-light) / 0.4);
+    --shadow-neu-inset: inset 4px 4px 10px hsl(var(--neu-dark) / 0.6), inset -4px -4px 10px hsl(var(--neu-light) / 0.4);
+    --shadow-neu-pressed: inset 6px 6px 12px hsl(var(--neu-dark) / 0.7), inset -6px -6px 12px hsl(var(--neu-light) / 0.5);
+
+    --gradient-bg: linear-gradient(135deg, hsl(222 32% 14%), hsl(222 28% 10%));
+
+    --sidebar-background: 222 30% 14%;
+    --sidebar-foreground: 220 25% 92%;
+    --sidebar-primary: 195 85% 55%;
+    --sidebar-primary-foreground: 222 30% 12%;
+    --sidebar-accent: 222 25% 20%;
+    --sidebar-accent-foreground: 220 25% 92%;
+    --sidebar-border: 222 25% 22%;
+    --sidebar-ring: 195 85% 55%;
   }
 }
 
@@ -99,7 +134,86 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    direction: rtl;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-arabic;
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
+
+@layer components {
+  .neu {
+    background: hsl(var(--background));
+    box-shadow: var(--shadow-neu);
+    border-radius: var(--radius);
+  }
+  .neu-sm {
+    background: hsl(var(--background));
+    box-shadow: var(--shadow-neu-sm);
+    border-radius: calc(var(--radius) - 0.25rem);
+  }
+  .neu-inset {
+    background: hsl(var(--background));
+    box-shadow: var(--shadow-neu-inset);
+    border-radius: var(--radius);
+  }
+  .neu-pressed {
+    background: hsl(var(--background));
+    box-shadow: var(--shadow-neu-pressed);
+    border-radius: var(--radius);
+  }
+  .neu-btn {
+    background: hsl(var(--background));
+    box-shadow: var(--shadow-neu-sm);
+    border-radius: calc(var(--radius) - 0.25rem);
+    transition: var(--transition-smooth);
+  }
+  .neu-btn:hover {
+    box-shadow: var(--shadow-neu);
+    transform: translateY(-1px);
+  }
+  .neu-btn:active {
+    box-shadow: var(--shadow-neu-pressed);
+    transform: translateY(0);
+  }
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  .printable, .printable * { visibility: visible; }
+  .printable { position: absolute; inset: 0; padding: 1rem; }
+  .no-print { display: none !important; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.5); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary)); }
