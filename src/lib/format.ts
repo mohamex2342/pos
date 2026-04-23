@@ -13,7 +13,7 @@ export const formatNumber = (n: number, decimals = 2): string => {
   return toArabicDigits(formatted);
 };
 
-export const formatCurrency = (n: number, currency = "ر.س"): string => {
+export const formatCurrency = (n: number, currency = "ج.م"): string => {
   return `${formatNumber(n)} ${currency}`;
 };
 
