@@ -103,7 +103,7 @@ export const printInvoice = (sale: Sale, settings: Settings) => {
     </div>
     <div class="footer">
       <p>شكراً لتعاملكم معنا</p>
-      <p style="margin-top:8px;">تكنوفلاش - نظام إدارة نقاط البيع</p>
+      <p style="margin-top:8px;"> نظام إدارة نقاط البيع</p>
     </div>
   `;
   wrapPrint(content, `فاتورة #${sale.invoiceNumber}`);
