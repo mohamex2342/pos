@@ -175,12 +175,12 @@ export const db = {
   // الإعدادات
   getSettings: (): Settings => {
     const def: Settings = {
-      companyName: "تكنوفلاش",
+      companyName: "اسم المستخدم",
       companyAddress: "",
       companyPhone: "",
       companyEmail: "",
       taxRate: 15,
-      currency: "ر.س",
+      currency: "ج.م",
       passwordHash: hashPassword("123"),
       theme: "light",
       invoiceCounter: 1000,
