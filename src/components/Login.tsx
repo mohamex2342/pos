@@ -14,7 +14,7 @@ export const Login = () => {
     const settings = db.getSettings();
     if (hashPassword(password) === settings.passwordHash) {
       login();
-      toast.success("مرحباً بك في تكنوفلاش");
+      toast.success("مرحباً بك في مركز الحسابات");
     } else {
       toast.error("كلمة المرور غير صحيحة");
     }
@@ -27,7 +27,7 @@ export const Login = () => {
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl gradient-primary shadow-lg mb-6">
             <Lock className="w-12 h-12 text-primary-foreground" />
           </div>
-          <h1 className="text-4xl font-display font-black text-gradient mb-2">تكنوفلاش</h1>
+          <h1 className="text-4xl font-display font-black text-gradient mb-2">مركز الحسابات</h1>
           <p className="text-muted-foreground">نظام إدارة نقاط البيع العربي</p>
         </div>
 
@@ -67,7 +67,7 @@ export const Login = () => {
         </form>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
-          © تكنوفلاش - تطوير محمد ربيع
+          © مركز الحسابات - تطوير M_R_T_G
         </p>
       </div>
     </div>
