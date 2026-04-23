@@ -112,10 +112,6 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      <p className="text-center text-xs text-muted-foreground mt-8">
-        تكنوفلاش - الإصدار ١.٠ • تطوير محمد ربيع • مجاني ومفتوح المصدر
-      </p>
-
       <ConfirmDialog open={confirmReset} onClose={() => setConfirmReset(false)} onConfirm={resetAll}
         title="حذف جميع البيانات" message="سيتم حذف كل البيانات نهائياً. هل أنت متأكد؟" />
     </div>
