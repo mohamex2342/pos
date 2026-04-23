@@ -65,7 +65,7 @@ export const Sidebar = () => {
                 <span className="text-primary-foreground font-black text-xl">ت</span>
               </div>
               <div>
-                <h2 className="font-display font-black text-lg text-gradient">تكنوفلاش</h2>
+                <h2 className="font-display font-black text-lg text-gradient">مركز الحسابات</h2>
                 <p className="text-xs text-muted-foreground">نقاط البيع</p>
               </div>
             </div>
